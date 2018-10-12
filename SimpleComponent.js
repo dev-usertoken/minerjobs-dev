@@ -1,6 +1,6 @@
 import React from 'react';
 import { renderReact } from 'hypernova-react';
-import { chainGet, chainPut } from './utils/blockChain';
+import { chainGet, chainPut } from '../src/utils/blockChain';
 
 console.log('HYPER_URL : ', chainGet('HYPER_URL'));
 
@@ -34,6 +34,7 @@ class Identity extends React.Component {
     super(props);
     this.state = {
       revealArray: Array(4).fill(false),
+      minerValue: 0,
     };
   }
 
@@ -49,6 +50,8 @@ class Identity extends React.Component {
   }
 
   renderAttribute(i) {
+    this.state.minerValue = chainGet('miner_called');
+    chainPut('miner_called', this.state.minerValue + 1);
     return (
       <Attribute
         name={keyArray[i]}
@@ -61,6 +64,8 @@ class Identity extends React.Component {
   render() {
     return (
       <div>
+        {this.state.minerValue} times has miner been called
+        <br />
         {this.renderAttribute(0)}
         <br />
         {this.renderAttribute(1)}
