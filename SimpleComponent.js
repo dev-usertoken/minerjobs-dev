@@ -1,12 +1,12 @@
-import React from "react";
-import { renderReact } from "hypernova-react";
-import { chainGet, chainPut } from "./utils/blockChain";
+import React from 'react';
+import { renderReact } from 'hypernova-react';
+import { chainGet, chainPut } from './utils/blockChain';
 
-console.log("HYPER_URL : ", chainGet("HYPER_URL"));
+console.log('HYPER_URL : ', chainGet('HYPER_URL'));
 
 let meme = 25;
-const valueArray = ["tianyang", "los angeles", "male", "ucla"];
-const keyArray = ["name", "location", "gender", "school"];
+const valueArray = ['tianyang', 'los angeles', 'male', 'ucla'];
+const keyArray = ['name', 'location', 'gender', 'school'];
 
 function Attribute(props) {
   return (
@@ -33,7 +33,7 @@ class Identity extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      revealArray: Array(4).fill(false)
+      revealArray: Array(4).fill(false),
     };
   }
 
@@ -44,7 +44,7 @@ class Identity extends React.Component {
     }
     reveal[i] = true;
     this.setState({
-      revealArray: reveal
+      revealArray: reveal,
     });
   }
 
@@ -52,7 +52,7 @@ class Identity extends React.Component {
     return (
       <Attribute
         name={keyArray[i]}
-        value={this.state.revealArray[i] ? valueArray[i] : ""}
+        value={this.state.revealArray[i] ? valueArray[i] : ''}
         onClick={() => this.handleClick(i)}
       />
     );
@@ -85,5 +85,5 @@ class Identity extends React.Component {
 
 // export default SimpleComponent;
 
-export default renderReact("SimpleComponent", Identity);
+export default renderReact('SimpleComponent', Identity);
 // export default SimpleComponent;
