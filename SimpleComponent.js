@@ -1,14 +1,14 @@
-import React from 'react';
-import { renderReact } from 'hypernova-react';
+import React from "react";
+import { renderReact } from "hypernova-react";
 
 let meme = 25;
-const valueArray = ['tianyang', 'los angeles', 'male', 'ucla'];
-const keyArray = ['name', 'location', 'gender', 'school'];
+const valueArray = ["tianyang", "los angeles", "male", "ucla"];
+const keyArray = ["name", "location", "gender", "school"];
 
 function Attribute(props) {
   return (
     <span className="reveal">
-      {props.name} :  {props.value}
+      {props.name} : {props.value}
       <button className="reveal" onClick={props.onClick}>
         reveal
       </button>
@@ -26,11 +26,11 @@ function Attribute(props) {
 //
 // export default renderReact("SimpleComponent", SimpleComponent);
 
-class Identity extends React.Component{
+class Identity extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      revealArray: Array(4).fill(false),
+      revealArray: Array(4).fill(false)
     };
   }
 
@@ -41,7 +41,7 @@ class Identity extends React.Component{
     }
     reveal[i] = true;
     this.setState({
-      revealArray: reveal,
+      revealArray: reveal
     });
   }
 
@@ -49,14 +49,14 @@ class Identity extends React.Component{
     return (
       <Attribute
         name={keyArray[i]}
-        value={this.state.revealArray[i] ? valueArray[i] : ''}
+        value={this.state.revealArray[i] ? valueArray[i] : ""}
         onClick={() => this.handleClick(i)}
       />
     );
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div>
         {this.renderAttribute(0)}
         <br />
@@ -66,15 +66,9 @@ class Identity extends React.Component{
         <br />
         {this.renderAttribute(3)}
       </div>
-
-
     );
-
-
   }
 }
-
-
 
 // const MyComponent = ({ name }) => (
 //   //  renderReact("SimpleComponent", name =>
@@ -88,5 +82,5 @@ class Identity extends React.Component{
 
 // export default SimpleComponent;
 
-export default renderReact('SimpleComponent', Identity);
+export default renderReact("SimpleComponent", Identity);
 // export default SimpleComponent;

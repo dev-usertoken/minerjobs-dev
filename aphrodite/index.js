@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { renderReactWithAphrodite } from 'hypernova-aphrodite';
-import { StyleSheet, css } from 'aphrodite';
+import React, { Component } from "react";
+import { renderReactWithAphrodite } from "hypernova-aphrodite";
+import { StyleSheet, css } from "aphrodite";
 
 class Aphrodite extends Component {
   render() {
@@ -22,24 +22,24 @@ class Aphrodite extends Component {
 
 const styles = StyleSheet.create({
   red: {
-    backgroundColor: 'red',
+    backgroundColor: "red"
   },
 
   blue: {
-    backgroundColor: 'blue',
+    backgroundColor: "blue"
   },
 
   hover: {
-    ':hover': {
-      backgroundColor: 'red',
-    },
+    ":hover": {
+      backgroundColor: "red"
+    }
   },
 
   small: {
-    '@media (max-width: 600px)': {
-      backgroundColor: 'red',
-    },
-  },
+    "@media (max-width: 600px)": {
+      backgroundColor: "red"
+    }
+  }
 });
 
-export default renderReactWithAphrodite('aphrodite', Aphrodite);
+export default renderReactWithAphrodite("aphrodite", Aphrodite);
