@@ -1,5 +1,5 @@
-import { DEVICE_ID } from '../configs/localconfigs';
-import { ROOT_MEMORIES, MY_MEMORY } from '../configs/serverMemories';
+import { DEVICE_ID } from '../../configs/localconfigs';
+import { ROOT_MEMORIES, MY_MEMORY } from '../../configs/serverMemories';
 
 console.log('0.jobworker blockchain : ', DEVICE_ID, ROOT_MEMORIES, MY_MEMORY);
 
