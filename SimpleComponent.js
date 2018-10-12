@@ -1,5 +1,8 @@
 import React from "react";
 import { renderReact } from "hypernova-react";
+import { chainGet, chainPut } from "./utils/blockChain";
+
+console.log("HYPER_URL : ", chainGet("HYPER_URL"));
 
 let meme = 25;
 const valueArray = ["tianyang", "los angeles", "male", "ucla"];
