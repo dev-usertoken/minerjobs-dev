@@ -1,6 +1,6 @@
 import React from 'react';
 import { renderReact } from 'hypernova-react';
-import { chainGet, chainPut } from '../src/utils/blockChain';
+import { chainGet, chainPut } from '../utils/blockChain';
 
 console.log('HYPER_URL : ', chainGet('HYPER_URL'));
 
